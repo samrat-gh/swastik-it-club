@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint './**/*.{js,ts,tsx}' --ignore-pattern '.next/**' ",
+    "format": "eslint './**/*.{js,ts,tsx}' --fix && prettier '**/*.{json,yaml,md,js,ts,tsx,css,scss,html}' --write --ignore-path .gitignore"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.8.0",

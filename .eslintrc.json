@@ -1,6 +1,5 @@
 {
-    "rules": {
-      "linebreak-style": ["error", "unix"]
-    }
+  "rules": {
+    "linebreak-style": ["error", "unix"]
   }
-  
+}
