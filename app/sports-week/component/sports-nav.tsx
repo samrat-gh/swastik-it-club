@@ -6,9 +6,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+import UserMenu from '@/app/components/UserMenu';
 import { cn } from '@/lib/utils';
 
-export default function Navbar() {
+export default function SportsNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
@@ -32,15 +33,6 @@ export default function Navbar() {
     };
   }, []);
 
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#features', label: 'What We Offer' },
-    { href: '#events', label: 'Events' },
-    { href: '#team', label: 'Team' },
-    { href: '#contact', label: 'Contact' },
-  ];
-
   return (
     <header
       className={cn(
@@ -60,7 +52,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center space-x-6 md:flex">
+        {/* <nav className="hidden items-center space-x-6 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -73,7 +65,11 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-        </nav>
+        </nav> */}
+
+        <div className="hidden items-center space-x-4 md:flex">
+          <UserMenu />
+        </div>
 
         <button
           className="text-foreground md:hidden"
@@ -85,7 +81,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="bg-background border-b md:hidden">
           <div className="container mx-auto space-y-4 px-4 py-4">
             <nav className="flex flex-col space-y-4">
@@ -103,9 +99,20 @@ export default function Navbar() {
                 </Link>
               ))}
             </nav>
+            <div className="hidden items-center space-x-4 md:flex">
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10"
+              >
+                Login
+              </Button>
+              <Button className="bg-primary hover:bg-primary/90 text-gray-800">
+                Join Us
+              </Button>
+            </div>
           </div>
         </div>
-      )}
+      )} */}
     </header>
   );
 }

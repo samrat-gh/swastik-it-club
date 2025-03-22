@@ -15,9 +15,10 @@ export async function createUser(data: {
   email: string;
   image: string;
 }) {
+  console.log(data);
   const res = await db.user.create({
     data,
   });
-
+  console.log(res);
   return res;
 }
