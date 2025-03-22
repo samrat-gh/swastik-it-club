@@ -1,3 +1,5 @@
+import { Code, Laptop, Lightbulb, Rocket, Trophy, Users } from 'lucide-react';
+
 import {
   Card,
   CardContent,
@@ -5,7 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Code, Lightbulb, Users, Trophy, Laptop, Rocket } from 'lucide-react';
 
 export default function Features() {
   const features = [

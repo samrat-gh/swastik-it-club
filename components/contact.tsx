@@ -1,6 +1,6 @@
+import { Mail, MapPin, Phone } from 'lucide-react';
+
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import {
   Card,
   CardContent,
@@ -8,7 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 export default function Contact() {
   return (

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import {
   Card,
   CardContent,
@@ -5,7 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import Image from 'next/image';
 
 export default function About() {
   return (

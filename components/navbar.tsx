@@ -80,12 +80,15 @@ export default function Navbar() {
 
         <div className="hidden items-center space-x-4 md:flex">
           <ThemeToggle />
-          <Button
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary/10"
-          >
-            Login
-          </Button>
+          <Link href="/login">
+            <Button
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary/10"
+            >
+              Login
+            </Button>
+          </Link>
+
           <Button className="bg-primary hover:bg-primary/90 !text-gray-800 dark:text-white">
             Join Us
           </Button>

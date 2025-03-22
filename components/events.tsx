@@ -1,3 +1,6 @@
+import { Calendar, Clock, MapPin } from 'lucide-react';
+
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -6,8 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, MapPin, Clock } from 'lucide-react';
 
 export default function Events() {
   const events = [
