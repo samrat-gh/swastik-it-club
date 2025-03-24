@@ -54,14 +54,29 @@ export default function RegisterPage() {
 
       if (result?.error) {
         setError('Failed to sign in after registration');
+        setIsLoading(false);
         return;
       }
 
-      router.push('/dashboard');
+      router.push('/sports-week');
       router.refresh();
     } catch (error) {
       setError(error instanceof Error ? error.message : 'Something went wrong');
-    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    setError(null);
+    setIsLoading(true);
+
+    try {
+      await signIn('google', {
+        redirect: false,
+        callbackUrl: '/sports-week',
+      });
+    } catch (error) {
+      setError('Error signing in with Google. Please try again.');
       setIsLoading(false);
     }
   };
@@ -182,8 +197,9 @@ export default function RegisterPage() {
 
           <div className="mt-6">
             <button
-              onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
-              className="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-1.5 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-gray-300 ring-inset hover:bg-gray-50"
+              onClick={handleGoogleSignIn}
+              disabled={isLoading}
+              className="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-1.5 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-gray-300 ring-inset hover:bg-gray-50 disabled:opacity-50"
             >
               <Image
                 src="/google.svg"

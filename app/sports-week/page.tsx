@@ -21,7 +21,7 @@ export default function SportsWeekPage() {
   return (
     <>
       <SportsNav />
-      <main className="min-h-screen pt-20 pb-12">
+      <main className="min-h-screen pb-12">
         <div className="container px-4 md:px-6">
           <div className="mb-8 flex flex-col items-start justify-center">
             <Link href="/" className="">
@@ -47,6 +47,7 @@ export default function SportsWeekPage() {
                 </div>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium">
@@ -71,6 +72,14 @@ export default function SportsWeekPage() {
                 </div>
               </CardContent>
             </Card>
+            <Link href="/sports-week/participate" className="ml-auto md:ml-0">
+              <Button
+                size="lg"
+                className="cursor-pointer border border-gray-800 bg-gray-900 text-white hover:border-slate-900 hover:bg-blue-50 hover:text-neutral-800"
+              >
+                Register Now
+              </Button>
+            </Link>
           </div>
 
           <div className="mb-10">

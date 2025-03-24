@@ -102,7 +102,7 @@ export default function SportsBanner() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/sports-week">
+              <Link href="/sports-week/participate">
                 <Button
                   size="lg"
                   className="cursor-pointer border border-gray-800 bg-gray-900 text-white hover:border-slate-900 hover:bg-blue-50 hover:text-neutral-800"

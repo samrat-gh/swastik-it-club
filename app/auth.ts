@@ -18,7 +18,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async jwt({ token, user }) {
       if (user) {
         const dbUser = await fetchUserWithEmail(user?.email || '');
-
+        console.log('dbUser', dbUser);
         if (!dbUser) {
           const res = await createUser({
             name: user.name!,

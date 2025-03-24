@@ -23,6 +23,7 @@ export default function UserMenu() {
       </Link>
     );
   }
+  console.log('user data', session);
 
   return (
     <div className="relative">
